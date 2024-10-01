@@ -1,0 +1,214 @@
+<html></html>
+<head>
+    <title>Calendar Event Using HTML and CSS - Easy Tutorial</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="evo-calendar.min.css">
+    <link rel="stylesheet" href="evo-calendar.midnight-blue.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="hero">
+        <div id="calendar"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+    <script src="evo-calendar.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#calendar').evoCalendar({
+                theme: 'midnight blue',
+                calendarEvents: [
+                    {
+                        id: 'event1', 
+                        name: "New Year", 
+                        date: "January/1/2024", 
+                        description: "**New Year’s Day** marks the first day of the calendar year, a magical moment of renewal and fresh beginnings. It symbolizes hope, celebration, and the chance to set new intentions. As the calendar flips, we step into a world of new possibilities, leaving the past behind and embracing the journey ahead with optimism and joy.",
+                        type: "holiday", 
+                        everyYear: true
+                    },
+                    {
+                        name: "Netaji's Birthday",
+                        //badge: "02/13 - 02/15", 
+                        date: ["January/23/2024"], 
+                        description: "**January 23 – Netaji Subhas Chandra Bose’s Birthday**: This day commemorates the birth of Netaji, a revered leader in India’s freedom struggle. His courage, leadership, and call for independence continue to inspire generations. On this day, people honor his legacy, remembering his contributions to India’s fight for sovereignty.", 
+                        type: "holiday",
+                        color: "#63d867",
+                        everyYear: true 
+                    },
+                    {
+                        name: "Republic Day",
+                        //badge: "02/13 - 02/15", 
+                        date: ["January/26/2024"], 
+                        description: "India celebrates Republic Day on 26 January each year to honor the day the Constitution of India came into effect in 1950, making the country a sovereign republic. This day is marked by grand parades, flag hoisting, and cultural displays across the nation, with the main event held at Rajpath in New Delhi. It symbolizes India's democratic spirit and unity.", 
+                        type: "holiday",
+                        color: "#63d867",
+                        everyYear: true 
+                    },
+                    {
+                        name: "Saraswati puja", 
+                        date: ["February/14/2024"], 
+                        description: " the goddess of wisdom, learning, and the arts. Celebrated mainly during Vasant Panchami, this occasion marks the onset of spring and is observed by worshipping Saraswati for blessings in education, music, and art. Students, artists, and scholars often participate in the puja, offering books, musical instruments, and tools of learning. The festival is marked by wearing yellow, symbolizing knowledge and prosperity, and by organizing cultural programs, including music and recitations.",
+                        type: "celebrate",
+                        color: "f4435b",
+                        everyYear: false
+                    },
+                    {
+                        name: "Doljata/Holi", 
+                        date: ["March/25/2024"], 
+                        description: "Doljatra, celebrated primarily in West Bengal and Odisha, marks the festival of colors, coinciding with Holi. It is dedicated to Lord Krishna, where devotees play with colors, sing devotional songs, and take out processions with beautifully decorated idols. Holi, a broader celebration across India, signifies the victory of good over evil and the arrival of spring. People joyously throw colored powders, splash water, and share sweets, symbolizing unity, love, and the triumph of positivity. Both festivals foster togetherness and cultural harmony.",
+                        type: "celebrate",
+                        color: "f4435b",
+                        everyYear: false
+                    },
+                    {
+                        name: "Good Friday", 
+                        date: ["March/29/2024"], 
+                        description: "Church services are held to remember the Passion of Christ, and many believers meditate on his suffering, death, and the meaning of forgiveness. Good Friday serves as a reminder of Jesus' selfless love and the hope of resurrection that follows with Easter.",
+                        type: "holiday",
+                        color: "#63d867",
+                        everyYear: false
+                    },
+                    {
+                        name: "Id-ul Fitr", 
+                        date: ["April/11/2024"], 
+                        description: "Id-ul-Fitr, also known as the Festival of Breaking the Fast  marks the end of Ramadan, the Islamic holy month of fasting. Celebrated with great joy, it is a time for communal prayers, feasts, and charity. In India, Id-ul-Fitr is a public holiday, and Muslims gather in mosques and open spaces for special prayers, followed by visits with family and friends.",
+                        type: "holiday",
+                        color: "#63d867",
+                        everyYear: false
+                    },
+                    {
+                        name: "Id-ul-Zoha", 
+                        date: ["june/17/2024"], 
+                        description: "Id-ul-Zoha, also known as Eid al-Adha or the Festival of Sacrifice, is one of the most important Islamic holidays. It commemorates Prophet Ibrahim's (Abraham's) willingness to sacrifice his son in obedience to God’s command, symbolizing faith and devotion.",
+                        type: "holiday",
+                        color: "#63d867",
+                        everyYear: false
+                    },
+                    {
+                        name: "Muharram", 
+                        date: ["july/17/2024"], 
+                        description: "Muharram is the first month of the Islamic lunar calendar and is considered one of the holiest months in Islam. The 10th day of Muharram, known as Ashura, holds great importance. For Shia Muslims, it commemorates the martyrdom of Imam Hussain, the grandson of Prophet Muhammad, at the Battle of Karbala, symbolizing the fight for justice and truth.",
+                        type: "holiday",
+                        color: "#63d867",
+                        everyYear: false
+                    },
+                    {
+                        name: "Independence Day", 
+                        date: ["August/15/2024"], 
+                        description: "Independence Day, celebrated on August 15th, marks the day in 1947 when India gained freedom from British colonial rule. This historic day is a tribute to the sacrifices of freedom fighters who fought for the nation's independence.",
+                        type: "Celebrate",
+                        color: "f4435b",
+                        everyYear: true
+                    },
+                    {
+                        name: "Gandhi's Birthday", 
+                        date: ["October/02/2024"], 
+                        description: "Independence Day, celebrated on August 15th, marks the day in 1947 when India gained freedom from British colonial rule. This historic day is a tribute to the sacrifices of freedom fighters who fought for the nation's independence.",
+                        type: "holiday",
+                        color: "#63d867",
+                        everyYear: true
+                    },
+                    {
+                        name: "Durga puja - Shasthi",
+                        date: ["October/09/2024"], 
+                        description: "Durga Puja is a major Hindu festival celebrating the victory of Goddess Durga over the demon Mahishasura, symbolizing the triumph of good over evil. It is especially popular in West Bengal and lasts for five days, filled with rituals, prayers, cultural performances, and vibrant pandals. The festival concludes with the immersion of Durga's idol in water on Vijaya Dashami. It is a time of devotion, celebration, and community bonding.",
+                        type: "holiday",
+                        color: "#63d867",
+                        everyYear: false
+                    },
+                    {
+                        name: "Durga puja - Saptmi",
+                        date: ["October/10/2024"], 
+                        description: "Durga Puja is a major Hindu festival celebrating the victory of Goddess Durga over the demon Mahishasura, symbolizing the triumph of good over evil. It is especially popular in West Bengal and lasts for five days, filled with rituals, prayers, cultural performances, and vibrant pandals. The festival concludes with the immersion of Durga's idol in water on Vijaya Dashami. It is a time of devotion, celebration, and community bonding.",
+                        type: "holiday",
+                        color: "#63d867",
+                        everyYear: false
+                    },
+                    {
+                        name: "Durga puja - Ashtami",
+                        date: ["October/11/2024"], 
+                        description: "Durga Puja is a major Hindu festival celebrating the victory of Goddess Durga over the demon Mahishasura, symbolizing the triumph of good over evil. It is especially popular in West Bengal and lasts for five days, filled with rituals, prayers, cultural performances, and vibrant pandals. The festival concludes with the immersion of Durga's idol in water on Vijaya Dashami. It is a time of devotion, celebration, and community bonding.",
+                        type: "holiday",
+                        color: "#63d867",
+                        everyYear: false
+                    },
+                    {
+                        name: "Durga puja - Navami",
+                        date: ["October/12/2024"], 
+                        description: "Durga Puja is a major Hindu festival celebrating the victory of Goddess Durga over the demon Mahishasura, symbolizing the triumph of good over evil. It is especially popular in West Bengal and lasts for five days, filled with rituals, prayers, cultural performances, and vibrant pandals. The festival concludes with the immersion of Durga's idol in water on Vijaya Dashami. It is a time of devotion, celebration, and community bonding.",
+                        type: "holiday",
+                        color: "#63d867",
+                        everyYear: false
+                    },
+                    {
+                        name: "Durga puja - Dashmi",
+                        date: ["October/13/2024"], 
+                        description: "Durga Puja is a major Hindu festival celebrating the victory of Goddess Durga over the demon Mahishasura, symbolizing the triumph of good over evil. It is especially popular in West Bengal and lasts for five days, filled with rituals, prayers, cultural performances, and vibrant pandals. The festival concludes with the immersion of Durga's idol in water on Vijaya Dashami. It is a time of devotion, celebration, and community bonding.",
+                        type: "holiday",
+                        color: "#63d867",
+                        everyYear: false
+                    },
+                    {
+                        name: "Durga puja Vacation",
+                        date: ["October/14/2024"], 
+                        description: "Durga Puja is a major Hindu festival celebrating the victory of Goddess Durga over the demon Mahishasura, symbolizing the triumph of good over evil. It is especially popular in West Bengal and lasts for five days, filled with rituals, prayers, cultural performances, and vibrant pandals. The festival concludes with the immersion of Durga's idol in water on Vijaya Dashami. It is a time of devotion, celebration, and community bonding.",
+                        type: "holiday",
+                        color: "#63d867",
+                        everyYear: false
+                    },
+                    {
+                        name: "Durga puja Vacation",
+                        date: ["October/15/2024"], 
+                        description: "Durga Puja is a major Hindu festival celebrating the victory of Goddess Durga over the demon Mahishasura, symbolizing the triumph of good over evil. It is especially popular in West Bengal and lasts for five days, filled with rituals, prayers, cultural performances, and vibrant pandals. The festival concludes with the immersion of Durga's idol in water on Vijaya Dashami. It is a time of devotion, celebration, and community bonding.",
+                        type: "holiday",
+                        color: "#63d867",
+                        everyYear: false
+                    },
+                    {
+                        name: "Lakshmi Puja",
+                        date: ["October/16/2024"], 
+                        description: "Durga Puja is a major Hindu festival celebrating the victory of Goddess Durga over the demon Mahishasura, symbolizing the triumph of good over evil. It is especially popular in West Bengal and lasts for five days, filled with rituals, prayers, cultural performances, and vibrant pandals. The festival concludes with the immersion of Durga's idol in water on Vijaya Dashami. It is a time of devotion, celebration, and community bonding.",
+                        type: "holiday",
+                        color: "#63d867",
+                        everyYear: false
+                    },
+                    {
+                        name: "Deepabali",
+                        date: ["October/31/2024", "November/01/2024"], 
+                        description: "Diwali, also known as the Festival of Lights, is one of the most important Hindu festivals, celebrated across India and worldwide. It marks the victory of light over darkness and good over evil, symbolized by the return of Lord Rama to Ayodhya after defeating Ravana. People celebrate by lighting oil lamps (diyas), bursting firecrackers, and sharing sweets with family and friends. Homes are decorated, and prayers are offered to Lakshmi, the goddess of wealth. Diwali typically falls in October or November.",
+                        type: "holiday",
+                        color: "#63d867",
+                        everyYear: false
+                    },
+                    {
+                        name: "Govardhan Puja",
+                        date: ["November/02/2024"], 
+                        description: "Govardhan Puja, also known as Annakut, is a Hindu festival celebrated the day after Diwali. It commemorates the lifting of Govardhan Hill by Lord Krishna to protect villagers from the wrath of Indra, the rain god. Devotees prepare and offer a variety of food to Lord Krishna as a symbol of gratitude. The festival highlights the importance of nature and environmental harmony.",
+                        type: "holiday",
+                        color: "#63d867",
+                        everyYear: false
+                    },
+                    {
+                        name: "Bhai Dooj",
+                        date: ["November/03/2024"], 
+                        description: "Bhai Dooj is a Hindu festival celebrating the bond between brothers and sisters. Observed on the second day after Diwali, sisters perform a ritual by applying a ,tilak on their brothers' foreheads and praying for their well-being, while brothers give gifts in return. It symbolizes love, protection, and mutual respect in the sibling relationship.",
+                        type: "holiday",
+                        color: "#63d867",
+                        everyYear: false
+                    },
+                    {
+                        name: "Christmas Day", 
+                        date: ["December/25/2024"], 
+                        description: "Christmas, celebrated on December 25th, marks the birth of Jesus Christ and is one of the most important Christian holidays. It is a time of joy, love, and giving, with traditions including decorating Christmas trees, exchanging gifts, and attending church services. Families gather for festive meals, and homes are adorned with lights and ornaments. The holiday embodies themes of peace, goodwill, and togetherness.",
+                        type: "holiday",
+                        color: "#63d867",
+                        everyYear: true 
+                    }
+                ]
+            });
+        });
+    </script>
+</body>
+</html>
