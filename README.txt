@@ -23,8 +23,7 @@ Setup
 
 Clone the repository:
 
-bashCopygit clone https://github.com/yourusername/event-calendar.git
-
+bashCopygit clone https: https://github.com/arijitmusib95/Event-Calender.git
 Ensure you have all the required files:
 
 index.html
